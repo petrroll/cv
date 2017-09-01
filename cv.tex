@@ -1,18 +1,20 @@
 \documentclass[a4paper,10pt]{article}
 
 \usepackage[a4paper, left=3cm, right=3cm, top=2.2cm, bottom=2.2cm]{geometry}
+
 %A Few Useful Packages
 \usepackage{marvosym}
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-%\usepackage[big]{layaureo} 				%better formatting of the A4 page
-% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{fullpage}
+
 \usepackage{supertabular} 				%for Grades
 \usepackage{titlesec}					%custom \section
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{amssymb}
+
 \newcommand{\comment}[2]{#2}
 \newcommand{\rightcol}{11.2cm}
 \newcommand{\leftcol}{2.8cm}
@@ -27,35 +29,13 @@
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
+
 %Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
-
-%-------------WATERMARK TEST [**not part of a CV**]---------------
-\usepackage[absolute]{textpos}
-
-\setlength{\TPHorizModule}{30mm}
-\setlength{\TPVertModule}{\TPHorizModule}
-\textblockorigin{2mm}{0.65\paperheight}
-\setlength{\parindent}{0pt}
+\addtolength{\voffset}{-1.0cm}
 
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
-
-%WATERMARK TEST [**not part of a CV**]---------------
-%\font\wm=''Baskerville:color=787878'' at 8pt
-%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
-%{\wm 
-%	\begin{textblock}{1}(0,0)
-%		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
-%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
-%		}
-%	}
-%	\end{textblock}
-%}
-
 \pagestyle{empty} % non-numbered pages
-
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
@@ -63,6 +43,7 @@
 		{\Huge Petr \textsc{Houška} 
 	}\bigskip\par}
 
+% Footnote at first page saying last update date
 %{\let\thefootnote\relax\footnote{Last update: \today}}
 
 %--------------------SECTIONS-----------------------------------
@@ -70,25 +51,21 @@
 \section{Personal Data}
 
 \begin{tabular}{rl}
-    %\textsc{Place and Date of Birth:} & České Budějovice, Czech Republic  | 28$^{\text{th}}$ October 1994 \\
     %\textsc{Address:}   & Labská 1, 370 11 České Budějovice, Czech Republic \\
-    \textsc{Phone:}     & +420 723 429 282 \\
     \textsc{Email:}     & \href{mailto:houskape@gmail.com}{houskape@gmail.com} \\
     \textsc{GitHub:}	& \href{https://github.com/petrroll/}{github.com/petrroll} \\
     \textsc{LinkedIn:}	& \href{https://linkedin.com/in/houskape}{linkedin.com/in/houskape} \\
-    \textsc{Personal Website:}	& \href{http://petrroll.cz}{petrroll.cz}
-    %\textsc{Twitter:}	& \href{https://twitter.com/petrroll}{@petrroll} 
-    %\textsc{StackOverflow:} & \href{http://stackoverflow.com/users/915609/petrroll} {stackoverflow.com/915609/petrroll}
-    \\
+    \textsc{Personal Website:}	& \href{http://petrroll.cz}{petrroll.cz}\\
+    %\textsc{Twitter:}	& \href{https://twitter.com/petrroll}{@petrroll}\\
+    %\textsc{StackOverflow:} & \href{http://stackoverflow.com/users/915609/petrroll} {stackoverflow.com/915609/petrroll}\\
 \end{tabular}
 
 %Section: Work Experience at the top
 \section{Work Experience}
 \begin{tabular}{p{\leftcol}|p{\rightcol}}
-\textsc{Jul -- Oct 2015} & PHP and JS developer at \textsc{Fiedler Magr}\\
-                    & \footnotesize{Aurelia based JavaScript SPA}\\
-\textsc{2013 -- Sep 2014} & Trainee PHP developer at \textsc{Fiedler Magr}\\
-                    & \footnotesize{Drupal7 modules}\\
+\textsc{Jul -- Oct 2015}    & PHP and JS developer at \textsc{Fiedler Magr}\\
+\textsc{2013 -- Sep 2014}   & \footnotesize{Aurelia based JavaScript SPA}\\
+                            & \footnotesize{Drupal7 modules}\\
 
 \multicolumn{2}{c}{} \\                    
                     
@@ -162,7 +139,7 @@ Hiking, Cycling, Social sciences, Software architecture, Computer graphics \\
 %\textbf{} : bold
 
 \newpage
-\par{\centering\Large \hypertarget{bscMFF}{Undergraduate \comment{Bachelor of Science}  Degree in \textsc{Computer Science}}\par}\large{\centering Grades (up to now, lower is better)\par}\normalsize
+\par{\centering\Large \hypertarget{bscMFF}{Undergraduate \comment{Bachelor of Science}  Degree in \textsc{Computer Science}}\par}\large{\centering Grades (lower is better)\par}\normalsize
 
 \begin{center}
 
@@ -248,4 +225,3 @@ NSWI090 & Computer Networks I & 3 & 1\\
 \end{center}
 
 \end{document}
-
