@@ -1,1 +1,0 @@
-tail -n +2 | sed -r 's/\r//' | sed -r 's/#/\\#/g' | sed -r 's/;$//g' | sed -r 's/([0-9];)1;1$/\1$\\checkmark$/g' | sed -r 's/;/ \& /g' |  sed -r 's/$/\\\\/g'
