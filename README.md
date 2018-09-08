@@ -1,0 +1,1 @@
+My current circuum vitae is [here](https://github.com/petrroll/curriculum_vitae/blob/master/cv.pdf).
